@@ -1,0 +1,132 @@
+body{
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5em;
+}
+
+#todoElContenido{
+    background-color: rgb(226, 226, 226);
+    height: 100vh;
+    display: grid;
+    grid-template-columns:
+        1fr 1fr 1fr 1fr 1fr 1fr 1fr
+    ;
+    column-gap: 10px;
+    row-gap: 20px;
+
+    grid-template-rows: 
+        160px 340px 300px 50px
+    ;
+    grid-template-areas: 
+        ". header header header header header ."
+        ". noticias_header noticias_header  noticias_header noticias_header noticias_header ."
+        ". categoria1 categoria2 categoria3 categoria4 categoria5 ."
+        ". footer footer footer footer footer ."
+    ;
+}
+
+.categoria1{
+    grid-area: categoria1;
+    background-color: blue;
+}
+
+.categoria2{
+    grid-area: categoria2;
+    background-color: rgb(89, 89, 134);
+}
+.categoria3{
+    grid-area: categoria3;
+    background-color: rgb(0, 183, 255);
+}
+.categoria4{
+    grid-area: categoria4;
+    background-color: rgb(247, 0, 255);
+}
+.categoria5{
+    grid-area: categoria5;
+    background-color: rgb(0, 255, 149);
+}
+
+.header{
+    grid-area: header;
+    background-color: orange;
+}
+
+.noticias_header{
+    grid-area: noticias_header;
+    background-color: rgb(62, 156, 7);
+}
+
+.footer{
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 767px ) and (min-width: 320px){
+
+    #todoElContenido{
+        display: grid;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        grid-template-columns: 
+            1fr
+            1fr
+        ;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-rows: 
+            104px
+            220px
+            200px
+            200px
+            200px
+            50px
+        ;
+        grid-template-areas: 
+            "header header"
+            "noticias_header noticias_header"
+            "categoria1 categoria2"
+            "categoria3 categoria4"
+            "categoria5 ."
+            "footer footer"
+        ;
+    }
+    
+}
+
+@media (max-width: 320px){
+
+    #todoElContenido{
+        display: grid;
+        height: 100vh;
+        background-color: rgb(255, 255, 255);
+        grid-template-columns: 
+            1fr
+        ;
+        column-gap: 10px;
+        row-gap: 10px;
+        grid-template-rows: 
+            104px
+            220px
+            200px
+            200px
+            200px
+            200px
+            200px
+            50px
+        ;
+        grid-template-areas: 
+            "header"
+            "noticias_header"
+            "categoria1"
+            "categoria2"
+            "categoria3"
+            "categoria4"
+            "categoria5"
+            "footer footer"
+        ;
+    }
+    
+}
